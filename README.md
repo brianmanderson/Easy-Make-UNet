@@ -3,6 +3,9 @@ A perfunctory UNet architecture that should be relatively easy to get yourself s
 
 An example is below for images which are 24x24x1
 
+Concatenations occur between encoding and decoding layers, maintain the nomeclature of Layer_0, Layer_1, etc.
+The bottom should be Base
+
     from Network import my_UNet
     layers_dict_conv = {'Layer_0': {'Encoding': [16, 32], 'Decoding': [32, 16]},
                         'Base': {'Encoding': [64]}}
