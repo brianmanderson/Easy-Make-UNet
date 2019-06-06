@@ -1,3 +1,13 @@
+'''
+Make_Network.py
+
+This function creates a unique UNet based on data dictionary and image input size given
+
+Please give reference to https://github.com/brianmanderson/Easy-Make-UNet if used
+'''
+__author__ = 'Brian Mark Anderson'
+__email__ = 'bmanderson@mdanderson.org'
+
 from Network import my_UNet
 layers_dict_conv = {'Layer_0': {'Encoding': [16, 32], 'Decoding': [32, 16]},
                     'Base': {'Encoding': [64]}}

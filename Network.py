@@ -1,3 +1,13 @@
+'''
+Network.py
+
+This function creates a unique UNet based on data dictionary and image input size given
+
+Please give reference to https://github.com/brianmanderson/Easy-Make-UNet if used
+'''
+__author__ = 'Brian Mark Anderson'
+__email__ = 'bmanderson@mdanderson.org'
+
 from keras.layers import Conv2D, Conv3D, Activation, UpSampling2D, UpSampling3D, BatchNormalization, Input, \
     Concatenate, MaxPooling3D, MaxPooling2D
 from keras.models import Model
@@ -32,7 +42,6 @@ class Unet(object):
                    name=name, strides=strides)(x)
         x = Activation(self.activation)(x)
         if self.batch_norm:
-            x = BatchNormalization()(x)
             x = BatchNormalization()(x)
         return x
 
