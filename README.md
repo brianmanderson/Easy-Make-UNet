@@ -1,5 +1,5 @@
 ## If you find this code useful, please provide a reference to my github page for others www.github.com/brianmanderson , thank you!
-# Easy-Make-UNet
+# Easy_Make_UNet
 A perfunctory UNet architecture that should be relatively easy to get yourself started
 
 An example is below for images which are 24x24x1
