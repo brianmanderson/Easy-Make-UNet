@@ -32,17 +32,17 @@ class Unet(object):
     def conv_block3D(self,output_size,x, name, strides=1):
         x = Conv3D(output_size, self.filters, activation=None, padding=self.padding,
                    name=name, strides=strides)(x)
-        x = Activation(self.activation)(x)
         if self.batch_norm:
             x = BatchNormalization()(x)
+        x = Activation(self.activation)(x)
         return x
 
     def conv_block2D(self,output_size,x, name, strides=1):
         x = Conv2D(output_size, self.filters, activation=None, padding=self.padding,
                    name=name, strides=strides)(x)
-        x = Activation(self.activation)(x)
         if self.batch_norm:
             x = BatchNormalization()(x)
+        x = Activation(self.activation)(x)
         return x
 
     def max_pool3D(self, x, name=''):
